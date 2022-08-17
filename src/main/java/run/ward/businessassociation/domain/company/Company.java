@@ -1,21 +1,21 @@
-package run.ward.businessassociation.domain;
+package run.ward.businessassociation.domain.company;
 
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.LastModifiedBy;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import javax.persistence.Entity;
-import javax.persistence.EntityListeners;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
 @Getter
+@NoArgsConstructor
 public class Company {
 
     @Id
+    @GeneratedValue(strategy =GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String region;
@@ -27,5 +27,10 @@ public class Company {
     @LastModifiedBy
     private LocalDate modDate;
 
-
+    @Builder
+    public Company(String name, String region, String category) {
+        this.name = name;
+        this.region = region;
+        this.category = category;
+    }
 }

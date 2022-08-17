@@ -1,8 +1,8 @@
-package run.ward.businessassociation.domain.repository;
+package run.ward.businessassociation.domain.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import run.ward.businessassociation.domain.User;
-
+import org.springframework.stereotype.Repository;
+@Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
 }
