@@ -17,6 +17,7 @@ import java.util.Date;
 @Getter
 @Entity
 @NoArgsConstructor
+@AllArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
 public class Member {
 

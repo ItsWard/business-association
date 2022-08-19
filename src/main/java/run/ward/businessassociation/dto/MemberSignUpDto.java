@@ -4,8 +4,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import run.ward.businessassociation.domain.member.Member;
 
+import javax.persistence.Entity;
+
 @NoArgsConstructor
 @Getter
+
 public class MemberSignUpDto {
 
     private String nickname;
