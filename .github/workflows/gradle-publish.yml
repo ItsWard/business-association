@@ -13,7 +13,7 @@ on:
   
 jobs:
   build: 
-    runs-on: ubuntu-20.04.5 # (4) 해당 스크립트를 작동할 OS 입니다.
+    runs-on: ubuntu-lastest # (4) 해당 스크립트를 작동할 OS 입니다.
     permissions: 
       contents: read 
       packages: write  
