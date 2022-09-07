@@ -75,7 +75,7 @@ jobs:
         # Source directory
 #         SOURCE: # optional, default is 
 #         # Target directory
-#         TARGET: # optional, default is /home/REMOTE_USER/
+        TARGET: /home/ward/
 #         # Arguments to pass to rsync
 #         ARGS: # optional, default is -rltgoDzvO
 #         # An array of folder to exclude
