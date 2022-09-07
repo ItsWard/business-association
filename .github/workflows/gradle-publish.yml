@@ -79,7 +79,7 @@ jobs:
         username: ward
         key: ${{ secrets.SERVER_SSH_KEY }}
         port: 22
-        script: rm -rf $PROJECT_NAME
+        script: rm -rf /home/ward/$PROJECT_NAME
 
     - name: executing remote ssh commands using ssh key
       uses: appleboy/ssh-action@master
@@ -88,4 +88,4 @@ jobs:
         username: ward
         key: ${{ secrets.SERVER_SSH_KEY }}
         port: 22
-        script: unzip $PROJECT_NAME.zip
+        script: unzip /home/ward/$PROJECT_NAME.zip
