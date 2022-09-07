@@ -56,7 +56,8 @@ jobs:
       shell: bash
         
     - name: Make zip file
-      run: zip -r ./$PROJECT_NAME.zip .         # (12)
+      run: zip -r ./$PROJECT_NAME.zip .        
+           pwd
       shell: bash
         
 
