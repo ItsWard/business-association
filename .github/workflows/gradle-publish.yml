@@ -79,7 +79,7 @@ jobs:
         username: ward
         key: ${{ secrets.SERVER_SSH_KEY }}
         port: 22
-        script: rm -rf /home/ward/$PROJECT_NAME
+        script: sudo rm -rf /home/ward/$PROJECT_NAME
 
     - name: executing remote ssh commands using ssh key
       uses: appleboy/ssh-action@master
