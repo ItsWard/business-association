@@ -65,16 +65,11 @@ jobs:
       uses: easingthemes/ssh-deploy@v2.2.11
       with:
         # Private Key
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        # Remote host
-        REMOTE_HOST: www.ward.com
-        # Remote user
+        SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+        REMOTE_HOST: ${{ secrets.WARD_IP }}
         REMOTE_USER: ward
-        # Remote port
         REMOTE_PORT: 22
-        # Source directory
-#         SOURCE: # optional, default is 
-#         # Target directory
+        SOURCE: deploy/$PROJECT_NAME.zip
         TARGET: /home/ward/
 #         # Arguments to pass to rsync
 #         ARGS: # optional, default is -rltgoDzvO
